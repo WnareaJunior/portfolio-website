@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', monospace;
+            background-color: #000;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Grey line in the middle */
+        .middle-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #444;
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+
+        /* Initial screen container */
+        .initial-screen {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            transition: opacity 0.5s ease;
+        }
+
+        /* The big OPEN button */
+        .open-button {
+            background-color: #fff;
+            color: #000;
+            border: 3px solid #000;
+            padding: 20px 60px;
+            font-size: 3rem;
+            font-weight: 900;
+            font-family: 'Orbitron', monospace;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            transition: all 0.3s ease;
+            z-index: 3;
+            position: relative;
+        }
+
+        .open-button:hover {
+            background-color: #000;
+            color: #fff;
+            border-color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Sliding door panels */
+        .door-left, .door-right {
+            position: fixed;
+            top: 0;
+            width: 50%;
+            height: 100vh;
+            background-color: #000;
+            z-index: 10;
+            transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .door-left {
+            left: 0;
+            transform: translateX(0);
+        }
+
+        .door-right {
+            right: 0;
+            transform: translateX(0);
+        }
+
+        .door-left.open {
+            transform: translateX(-100%);
+        }
+
+        .door-right.open {
+            transform: translateX(100%);
+        }
+
+        /* Coming soon screen */
+        .coming-soon {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+            opacity: 0;
+            transition: opacity 1s ease 1s;
+        }
+
+        .coming-soon.visible {
+            opacity: 1;
+        }
+
+        .coming-soon h1 {
+            color: #fff;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .coming-soon .author {
+            color: #888;
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .open-button {
+                font-size: 2rem;
+                padding: 15px 40px;
+                letter-spacing: 2px;
+            }
+
+            .coming-soon h1 {
+                font-size: 2.5rem;
+            }
+
+            .coming-soon .author {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Grey line in the middle -->
+    <div class="middle-line"></div>
+
+    <!-- Initial screen with button -->
+    <div class="initial-screen" id="initialScreen">
+        <button class="open-button" id="openButton">Open</button>
+    </div>
+
+    <!-- Sliding door panels -->
+    <div class="door-left" id="doorLeft"></div>
+    <div class="door-right" id="doorRight"></div>
+
+    <!-- Coming soon screen -->
+    <div class="coming-soon" id="comingSoon">
+        <h1>Coming Soon...</h1>
+        <p class="author">By: Wilson D. Narea</p>
+    </div>
+
+    <script>
+        document.getElementById('openButton').addEventListener('click', function() {
+            // Hide initial screen
+            document.getElementById('initialScreen').style.opacity = '0';
+            
+            // Open the doors
+            document.getElementById('doorLeft').classList.add('open');
+            document.getElementById('doorRight').classList.add('open');
+            
+            // Show coming soon screen after doors start opening
+            setTimeout(function() {
+                document.getElementById('comingSoon').classList.add('visible');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
