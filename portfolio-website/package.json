@@ -1,7 +1,9 @@
 {
   "name": "portfolio-website",
+  "homepage": "https://wnareajunior.github.io/portfolio-website",
   "version": "0.1.0",
   "private": true,
+  "description": "A scalable React portfolio website with a retro door animation.",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -12,6 +14,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
