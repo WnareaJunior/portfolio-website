@@ -4,7 +4,7 @@ import Button from '../../common/Button';
 import styles from './RetroLanding.module.css';
 
 const RetroLanding = () => {
-  const { doorsOpen, buttonFaded, isHovered, setIsHovered, openDoors } = useDoorAnimation();
+  const { doorsOpen, buttonFaded, setIsHovered, openDoors } = useDoorAnimation();
 
   return (
     <div className={styles.container}>
@@ -17,14 +17,14 @@ const RetroLanding = () => {
         onClick={openDoors}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={`${styles.openButton} ${buttonFaded ? styles.fadeOut : ''}`}
+        className={${styles.openButton} }
         disabled={buttonFaded}
       >
         OPEN
       </Button>
 
-      <div className={`${styles.door} ${styles.doorLeft} ${doorsOpen ? styles.open : ''}`} />
-      <div className={`${styles.door} ${styles.doorRight} ${doorsOpen ? styles.open : ''}`} />
+      <div className={${styles.door}  } />
+      <div className={${styles.door}  } />
 
       <main className={styles.comingSoon}>
         <h1 className={styles.title}>Coming Soon...</h1>
