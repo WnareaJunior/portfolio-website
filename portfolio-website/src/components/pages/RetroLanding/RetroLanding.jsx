@@ -17,14 +17,14 @@ const RetroLanding = () => {
         onClick={openDoors}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={${styles.openButton} }
+        className={styles.openButton}
         disabled={buttonFaded}
       >
         OPEN
       </Button>
 
-      <div className={${styles.door}  } />
-      <div className={${styles.door}  } />
+      <div className={`${styles.door} ${styles.doorLeft} ${doorsOpen ? styles.open : ''}`} />
+      <div className={`${styles.door} ${styles.doorRight} ${doorsOpen ? styles.open : ''}`} />
 
       <main className={styles.comingSoon}>
         <h1 className={styles.title}>Coming Soon...</h1>
