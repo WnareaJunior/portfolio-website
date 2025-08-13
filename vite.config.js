@@ -1,10 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
-const repo = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? ''
-const isUserSite = /\.github\.io$/i.test(repo)
-
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: isUserSite ? '/' : `/${repo}/`,
-})
+  // In dev (`vite`), use root `/`. In builds, read BASE_PATH (set by CI) or default to `/`.
+  base: command === 'serve' ? '/' : (process.env.BASE_PATH || '/'),
+}))
