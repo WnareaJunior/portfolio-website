@@ -31,7 +31,6 @@ jobs:
 
       - name: Build (Vite)
         env:
-          # If your vite.config reads this to compute `base`, pass it in
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: npm run build
 
