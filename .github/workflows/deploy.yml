@@ -22,21 +22,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Show workspace (sanity check)
+        run: |
+          pwd
+          ls -la
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
-          cache-dependency-path: '**/package-lock.json'
+          cache-dependency-path: |
+            package-lock.json
+            npm-shrinkwrap.json
 
       - name: Install dependencies
-        working-directory: portfolio-website
         run: npm ci --no-audit --no-fund
 
       - name: Build React app
-        working-directory: portfolio-website
         env:
-          # Dynamically set PUBLIC_URL based on repo name
+          # For project pages: use repo name as base path
           PUBLIC_URL: /${{ github.event.repository.name }}
         run: npm run build
 
@@ -46,7 +51,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: portfolio-website/build
+          path: build
 
   deploy:
     environment:
