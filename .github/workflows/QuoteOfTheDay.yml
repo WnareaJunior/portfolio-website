@@ -1,0 +1,73 @@
+name: Daily README QOTD
+
+on:
+  schedule:
+    - cron: "0 12 * * *"   # daily at 12:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate "Quote of the Day" and update README
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Our sentences
+          sentences=(
+            "A billionaire doesn't know what it means to be broke."
+            "California is in America."
+            "I am in a hurry today because I was working out for too long."
+            "This car is in good condition."
+            "One of Roger Miller's biggest hits was \"King of the Road\"."
+            "Time is more valuable than money."
+            "She fell and got a bruise on her thigh that was shaped like Texas."
+            "Therapy seems helpful."
+            "Every year Americans pay half a trillion in rent."
+            "I was in a boyband and we were signed to a label."
+            "The windows looked out over the backyard."
+            "Her mom asked her to come home for Christmas."
+            "I’ve done a psychic healing course."
+            "Tom wants a discount."
+            "I've narrowed the list of possibilities down to three."
+            "The mailbox was bent and broken and looked like someone had knocked it over on purpose."
+            "He went fast down the slide."
+          )
+          qotd="${sentences[$((RANDOM % ${#sentences[@]}))]}"
+
+          # Ensure README exists
+          [[ -f README.md ]] || echo "# Project Title\n\nInitial README." > README.md
+
+          # Strip previous QOTD block if present, keep the rest
+          awk '
+            /<!-- qotd:start -->/ {skip=1; next}
+            /<!-- qotd:end -->/   {skip=0; next}
+            !skip {print}
+          ' README.md > README.body.md
+
+          # Prepend fresh QOTD block to the README body
+          {
+            echo "<!-- qotd:start -->"
+            echo "# Quote of the Day"
+            echo
+            echo "> ${qotd}"
+            echo
+            echo "<!-- qotd:end -->"
+            echo
+            cat README.body.md
+          } > README.md
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update README Quote of the Day" || echo "No changes to commit"
+          git push
