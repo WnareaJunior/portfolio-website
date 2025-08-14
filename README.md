@@ -1,8 +1,10 @@
 <!-- qotd:start -->
 # Quote of the Day
 
-> <random sentence here>
+> I’ve done a psychic healing course.
+
 <!-- qotd:end -->
+
 
 
 # React + Vite
