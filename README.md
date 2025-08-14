@@ -7,7 +7,7 @@
 
 # My Portfolio Website
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue?style=for-the-badge)](https://your-portfolio-url.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue?style=for-the-badge)](https://wnareajunior.github.io/portfolio-website/)
 
 A modern, responsive personal portfolio built with **React** and **Vite**.  
 Showcasing my projects, skills, and experience in a clean and visually appealing way.
