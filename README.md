@@ -5,17 +5,48 @@
 
 <!-- qotd:end -->
 
+# My Portfolio Website
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue?style=for-the-badge)](https://your-portfolio-url.com)
 
-# React + Vite
+A modern, responsive personal portfolio built with **React** and **Vite**.  
+Showcasing my projects, skills, and experience in a clean and visually appealing way.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Screenshot](./screenshot.png) <!-- Optional: add a screenshot of your site -->
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Fast & Lightweight** – Powered by Vite for quick build times and instant HMR.
+- **Responsive Design** – Works beautifully on mobile, tablet, and desktop.
+- **Project Showcase** – Dedicated sections for featured work.
+- **Contact Section** – Easy way for visitors to get in touch.
+- **Quote of the Day** – Dynamic daily quote auto-updated via GitHub Actions.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Built With
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [JavaScript (ES6+)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [CSS Modules / Tailwind / Styled Components] <!-- Replace with what you actually used -->
+- [GitHub Actions](https://github.com/features/actions) – for automated README updates
+
+---
+
+## 📦 Installation & Setup
+
+```bash
+# Clone the repo
+git clone https://github.com/<your-username>/<your-repo>.git
+
+# Navigate to the project directory
+cd <your-repo>
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
