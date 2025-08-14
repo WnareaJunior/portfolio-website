@@ -1,3 +1,10 @@
+<!-- qotd:start -->
+# Quote of the Day
+
+> <random sentence here>
+<!-- qotd:end -->
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
