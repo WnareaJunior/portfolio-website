@@ -1,9 +1,10 @@
 <!-- qotd:start -->
 # Quote of the Day
 
-> I’ve done a psychic healing course.
+> A billionaire doesn't know what it means to be broke.
 
 <!-- qotd:end -->
+
 
 # My Portfolio Website
 
