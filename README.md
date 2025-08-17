@@ -1,9 +1,10 @@
 <!-- qotd:start -->
 # Quote of the Day
 
-> Tom wants a discount.
+> A billionaire doesn't know what it means to be broke.
 
 <!-- qotd:end -->
+
 
 
 
