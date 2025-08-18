@@ -1,9 +1,10 @@
 <!-- qotd:start -->
 # Quote of the Day
 
-> A billionaire doesn't know what it means to be broke.
+> He went fast down the slide.
 
 <!-- qotd:end -->
+
 
 
 
