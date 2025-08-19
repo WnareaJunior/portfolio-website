@@ -1,9 +1,10 @@
 <!-- qotd:start -->
 # Quote of the Day
 
-> He went fast down the slide.
+> California is in America.
 
 <!-- qotd:end -->
+
 
 
 
