@@ -1,10 +1,3 @@
-<!-- qotd:start -->
-# Quote of the Day
-
-> Every year Americans pay half a trillion in rent.
-
-<!-- qotd:end -->
-
 
 
 
