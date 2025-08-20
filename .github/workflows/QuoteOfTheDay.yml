@@ -67,6 +67,5 @@ jobs:
           commit-message: "chore: update README Quote of the Day"
           title: "chore: update README Quote of the Day"
           body: "Automated daily QOTD update."
-          labels: false
           signoff: false
           delete-branch: true
