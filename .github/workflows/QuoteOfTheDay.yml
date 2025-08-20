@@ -68,5 +68,6 @@ jobs:
           title: "chore: update README Quote of the Day"
           body: "Automated daily QOTD update."
           labels: automated, qotd
+          tag: false
           signoff: false
           delete-branch: true
