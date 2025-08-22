@@ -1,9 +1,10 @@
 <!-- qotd:start -->
 # Quote of the Day
 
-> Every year Americans pay half a trillion in rent.
+> The mailbox was bent and broken and looked like someone had knocked it over on purpose.
 
 <!-- qotd:end -->
+
 
 
 
