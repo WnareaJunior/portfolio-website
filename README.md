@@ -19,7 +19,6 @@
 A modern, responsive personal portfolio built with **React** and **Vite**.  
 Showcasing my projects, skills, and experience in a clean and visually appealing way.
 
-![Portfolio Screenshot](./screenshot.png) <!-- Optional: add a screenshot of your site -->
 
 ---
 
