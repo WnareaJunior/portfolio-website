@@ -4,6 +4,8 @@ export default function welcomeSection() {
             <main>
                 <h1 className="text-4xl font-bold text-center">A trophy case of paradigm shifting projects</h1>
                 <p className="mt-4 text-lg text-center">Under Construction :3</p>
+                <p>Check out my <a href="https://github.com/wnareajunior" target="_blank" rel="noopener noreferrer">GitHub</a> for projects.</p>
+
             </main>
         </div>
     );
