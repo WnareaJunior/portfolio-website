@@ -1,9 +1,10 @@
 <!-- qotd:start -->
 # Quote of the Day
 
-> The mailbox was bent and broken and looked like someone had knocked it over on purpose.
+> I was in a boyband and we were signed to a label.
 
 <!-- qotd:end -->
+
 
 
 
