@@ -1,32 +1,32 @@
-// Mock project data
+// Mock project data - UPDATE WITH YOUR ACTUAL IMAGES
 const projects = [
   {
     id: 1,
     title: "Panthalassa Buoy AI 🌊⚡",
     description: "AI-powered ocean wave forecasting for renewable energy. Uses advanced machine learning trained on Copernicus Marine and NOAA datasets to predict wave activity and identify optimal deployment sites for the 200-ft Panthalassa energy-harvesting buoy.",
-    githubUrl: "https://github.com/wnareajunior/panthalassa-buoy-ai",
-    image: "https://via.placeholder.com/400x250/1e293b/3b82f6?text=Ocean+Wave+AI"
+    githubUrl: "https://github.com/WnareaJunior/wave-energy-forecasting-ai",
+    image: "/public/images/projects/panthalassa.jpg" // UPDATE THIS PATH
   },
   {
     id: 2,
     title: "Chatbot SaaS Web Integration",
     description: "Seamless AI chatbot integration for businesses looking to enhance customer engagement and streamline communication. Features easy integration, customizable behavior, and scalable architecture for businesses of all sizes.",
-    githubUrl: "https://github.com/wnareajunior/chatbot-saas-web",
-    image: "https://via.placeholder.com/400x250/1e293b/3b82f6?text=Chatbot+SaaS"
+    githubUrl: "https://github.com/WnareaJunior/chatbot-saas-web-",
+    image: "/images/projects/chatbot.jpg" // UPDATE THIS PATH
   },
   {
     id: 3,
     title: "Mission Control Frontend 🚀",
     description: "Frontend software for a Mission Control system developed as part of a senior Capstone project. Features real-time telemetry monitoring, control interface for stop/abort commands, and flight data recording for self-landing amateur rocket systems.",
-    githubUrl: "https://github.com/wnareajunior/mission-control-frontend",
-    image: "https://via.placeholder.com/400x250/1e293b/3b82f6?text=Mission+Control"
+    githubUrl: "https://github.com/WnareaJunior/SEDS-FIU",
+    image: "/images/projects/mission-control.jpg" // UPDATE THIS PATH
   },
   {
     id: 4,
     title: "OpenCrib 🏠✨",
     description: "iOS-first platform for hosting events and bringing people together. From house shows and backyard parties to art pop-ups and workshops, OpenCrib makes it easy to open your door to a community that cares.",
-    githubUrl: "https://github.com/wnareajunior/OpenCrib",
-    image: "https://via.placeholder.com/400x250/1e293b/3b82f6?text=OpenCrib+iOS"
+    githubUrl: "https://github.com/WnareaJunior/Open-Crib.Frontend",
+    image: "/images/projects/opencrib.jpg" // UPDATE THIS PATH
   }
 ];
 
@@ -86,8 +86,21 @@ export default function ModernPortfolio({ onBackToOriginal }) {
           <div className="bg-gray-900 rounded-xl p-8 hover:bg-gray-850 transition-colors duration-300">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <div className="w-48 h-48 bg-gray-700 rounded-xl mx-auto mb-6 flex items-center justify-center text-gray-400">
-                  [Profile Photo]
+                {/* UPDATED: Replace with your actual profile photo */}
+                <div className="w-48 h-48 rounded-xl mx-auto mb-6 overflow-hidden">
+                  <img 
+                    src="/images/profile.jpg" 
+                    alt="Wilson Narea"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      // Fallback if image doesn't exist
+                      e.target.style.display = 'none';
+                      e.target.nextElementSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-full h-full bg-gray-700 rounded-xl flex items-center justify-center text-gray-400" style={{display: 'none'}}>
+                    [Profile Photo]
+                  </div>
                 </div>
               </div>
               <div>
@@ -131,11 +144,18 @@ export default function ModernPortfolio({ onBackToOriginal }) {
               >
                 <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
                   <div className={`${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                    />
+                    {/* UPDATED: Project images with fallback */}
+                    <div className="w-full h-64 bg-gray-700 overflow-hidden">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          // Fallback to placeholder if image doesn't exist
+                          e.target.src = `https://via.placeholder.com/400x250/1e293b/3b82f6?text=${encodeURIComponent(project.title.split(' ')[0])}`;
+                        }}
+                      />
+                    </div>
                   </div>
                   <div className="p-8 flex flex-col justify-center">
                     <h3 className="text-2xl font-bold mb-4 text-blue-400">{project.title}</h3>
