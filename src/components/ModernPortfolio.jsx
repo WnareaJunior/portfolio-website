@@ -1,32 +1,31 @@
-// Mock project data - UPDATE WITH YOUR ACTUAL IMAGES
 const projects = [
   {
     id: 1,
     title: "Panthalassa Buoy AI 🌊⚡",
     description: "AI-powered ocean wave forecasting for renewable energy. Uses advanced machine learning trained on Copernicus Marine and NOAA datasets to predict wave activity and identify optimal deployment sites for the 200-ft Panthalassa energy-harvesting buoy.",
     githubUrl: "https://github.com/WnareaJunior/wave-energy-forecasting-ai",
-    image: "/public/images/projects/panthalassa.jpg" // UPDATE THIS PATH
+    image: "/public/images/projects/panthalassa.jpg" 
   },
   {
     id: 2,
     title: "Chatbot SaaS Web Integration",
     description: "Seamless AI chatbot integration for businesses looking to enhance customer engagement and streamline communication. Features easy integration, customizable behavior, and scalable architecture for businesses of all sizes.",
     githubUrl: "https://github.com/WnareaJunior/chatbot-saas-web-",
-    image: "/images/projects/chatbot.jpg" // UPDATE THIS PATH
+    image: "/images/projects/chatbot.jpg" 
   },
   {
     id: 3,
     title: "Mission Control Frontend 🚀",
     description: "Frontend software for a Mission Control system developed as part of a senior Capstone project. Features real-time telemetry monitoring, control interface for stop/abort commands, and flight data recording for self-landing amateur rocket systems.",
     githubUrl: "https://github.com/WnareaJunior/SEDS-FIU",
-    image: "/images/projects/mission-control.jpg" // UPDATE THIS PATH
+    image: "/images/projects/mission-control.jpg" 
   },
   {
     id: 4,
     title: "OpenCrib 🏠✨",
     description: "iOS-first platform for hosting events and bringing people together. From house shows and backyard parties to art pop-ups and workshops, OpenCrib makes it easy to open your door to a community that cares.",
     githubUrl: "https://github.com/WnareaJunior/Open-Crib.Frontend",
-    image: "/images/projects/opencrib.jpg" // UPDATE THIS PATH
+    image: "/images/projects/opencrib.jpg" 
   }
 ];
 
@@ -86,7 +85,7 @@ export default function ModernPortfolio({ onBackToOriginal }) {
           <div className="bg-gray-900 rounded-xl p-8 hover:bg-gray-850 transition-colors duration-300">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                {/* UPDATED: Replace with your actual profile photo */}
+                
                 <div className="w-48 h-48 rounded-xl mx-auto mb-6 overflow-hidden">
                   <img 
                     src="/images/profile.jpg" 
@@ -189,7 +188,7 @@ export default function ModernPortfolio({ onBackToOriginal }) {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8 text-blue-400">Get In Touch</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Interested in working together or discussing a project? I'd love to hear from you!
+            I'd love to hear from you!
           </p>
           <a 
             href="mailto:wilsondev27@outlook.com"
@@ -206,7 +205,7 @@ export default function ModernPortfolio({ onBackToOriginal }) {
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-gray-700">
         <div className="max-w-6xl mx-auto text-center text-gray-400">
-          <p>© 2025 Wilson Narea. Built with passion and lots of coffee ☕</p>
+          <p>© 2025 Wilson Narea. Built with passion and lots of coffee </p>
         </div>
       </footer>
     </div>
