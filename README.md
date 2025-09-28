@@ -111,7 +111,7 @@ The portfolio adapts beautifully across all device sizes:
 **Wilson Narea**  
 📧 [wilsondev27@outlook.com](mailto:wilsondev27@outlook.com)  
 🔗 [GitHub Profile](https://github.com/wnareajunior)  
-🌐 [Live Portfolio](https://narea.dev
+🌐 [Live Portfolio](https://narea.dev)
 
 -----
 
