@@ -4,7 +4,7 @@ const projects = [
     title: "Panthalassa Buoy AI 🌊⚡",
     description: "AI-powered ocean wave forecasting for renewable energy. Uses advanced machine learning trained on Copernicus Marine and NOAA datasets to predict wave activity and identify optimal deployment sites for the 200-ft Panthalassa energy-harvesting buoy.",
     githubUrl: "https://github.com/WnareaJunior/wave-energy-forecasting-ai",
-    image: "/public/images/projects/panthalassa.jpg" 
+    image: "/images/projects/panthalassa.jpg" 
   },
   {
     id: 2,
