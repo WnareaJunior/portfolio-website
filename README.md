@@ -1,10 +1,10 @@
 <!-- qotd:start -->
-
 # Quote of the Day
 
-> The mailbox was bent and broken and looked like someone had knocked it over on purpose.
+> Tom wants a discount.
 
 <!-- qotd:end -->
+
 
 # My Portfolio Website
 
