@@ -89,7 +89,7 @@ export default function ModernPortfolio({ onBackToOriginal }) {
               className="w-48 h-48 rounded-xl object-cover mx-auto"
             />
             <p className="text-lg text-deep-200 leading-relaxed">
-              I work across the stack — machine learning, web frontends, and native iOS.
+              I work across the stack: machine learning, web frontends, and native iOS.
               Recent work ranges from wave-energy forecasting models to mission-control
               software for student rocketry, with an events app on the side.
             </p>
