@@ -2,30 +2,34 @@ const projects = [
   {
     id: 1,
     title: "Panthalassa Buoy AI 🌊⚡",
-    description: "AI-powered ocean wave forecasting for renewable energy. Uses advanced machine learning trained on Copernicus Marine and NOAA datasets to predict wave activity and identify optimal deployment sites for the 200-ft Panthalassa energy-harvesting buoy.",
+    description: "Ocean wave forecasting for renewable energy. Machine learning models trained on Copernicus Marine and NOAA datasets predict wave activity and flag the best deployment sites for the 200-ft Panthalassa energy-harvesting buoy.",
     githubUrl: "https://github.com/WnareaJunior/wave-energy-forecasting-ai",
-    image: "/images/projects/panthalassa.jpg" 
+    image: "/images/projects/panthalassa.jpg",
+    imageAlt: "Panthalassa dashboard showing data pipeline status and wave power analysis results"
   },
   {
     id: 2,
     title: "Chatbot SaaS Web Integration",
-    description: "Seamless AI chatbot integration for businesses looking to enhance customer engagement and streamline communication. Features easy integration, customizable behavior, and scalable architecture for businesses of all sizes.",
+    description: "Drop-in AI chatbot for business websites. An embeddable widget with customizable behavior on a backend built to scale — add the script, configure the bot, done.",
     githubUrl: "https://github.com/WnareaJunior/chatbot-saas-web-",
-    image: "/images/projects/chatbot.jpg" 
+    image: "/images/projects/chatbot.jpg",
+    imageAlt: "ChatBot Pro landing page with an embedded chat widget"
   },
   {
     id: 3,
     title: "Mission Control Frontend 🚀",
-    description: "Frontend software for a Mission Control system developed as part of a senior Capstone project. Features real-time telemetry monitoring, control interface for stop/abort commands, and flight data recording for self-landing amateur rocket systems.",
+    description: "Mission-control software for self-landing amateur rockets, built as a senior capstone with SEDS FIU. Live telemetry monitoring, stop/abort commands, and flight data recording.",
     githubUrl: "https://github.com/WnareaJunior/SEDS-FIU",
-    image: "/images/projects/mission-control.jpg" 
+    image: "/images/projects/mission-control.jpg",
+    imageAlt: "Mission control interface graphing live tank pressures and weights during a test"
   },
   {
     id: 4,
     title: "OpenCrib 🏠✨",
-    description: "iOS-first platform for hosting events and bringing people together. From house shows and backyard parties to art pop-ups and workshops, OpenCrib makes it easy to open your door to a community that cares.",
+    description: "iOS app for hosting events and bringing people together — house shows, backyard parties, art pop-ups, workshops. Open your door to a community that cares.",
     githubUrl: "https://github.com/WnareaJunior/Open-Crib.Frontend",
-    image: "/images/projects/opencrib.jpg" 
+    image: "/images/projects/opencrib.jpg",
+    imageAlt: "Three OpenCrib iPhone screens: event map, host profile, and party creation form"
   }
 ];
 
@@ -45,7 +49,7 @@ export default function ModernPortfolio({ onBackToOriginal }) {
                 onClick={onBackToOriginal}
                 className="text-deep-400 hover:text-white transition-colors duration-200"
               >
-                ← Back
+                ← Back to 1998
               </button>
             </nav>
           </div>
@@ -56,10 +60,11 @@ export default function ModernPortfolio({ onBackToOriginal }) {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-[clamp(2.75rem,6vw+1rem,4.5rem)] font-bold type-display mb-6 text-white">
-            Building the Future
+            Oceans, rockets, house parties.
           </h1>
           <p className="text-xl text-deep-200 mb-8 leading-relaxed">
-            Full-stack developer specializing in AI, ocean tech, and community platforms.
+            I'm Wilson Narea, a full-stack developer. I build wave-energy forecasting AI,
+            rocket mission control, and community apps for iOS.
           </p>
           <a
             href="#projects"
@@ -77,15 +82,16 @@ export default function ModernPortfolio({ onBackToOriginal }) {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <img
               src="/images/profile.jpg"
-              alt="Wilson Narea"
+              alt="Portrait of Wilson Narea"
               width="192"
               height="192"
               loading="lazy"
               className="w-48 h-48 rounded-xl object-cover mx-auto"
             />
             <p className="text-lg text-deep-200 leading-relaxed">
-              Full-stack developer working in AI, machine learning, and iOS.
-              I build solutions to real-world problems, from ocean energy forecasting to community platforms.
+              I work across the stack — machine learning, web frontends, and native iOS.
+              Recent work ranges from wave-energy forecasting models to mission-control
+              software for student rocketry, with an events app on the side.
             </p>
           </div>
         </div>
@@ -105,7 +111,7 @@ export default function ModernPortfolio({ onBackToOriginal }) {
                   <div className={`${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={project.imageAlt}
                       loading="lazy"
                       className="w-full h-64 object-cover"
                     />
@@ -140,7 +146,7 @@ export default function ModernPortfolio({ onBackToOriginal }) {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-[clamp(1.875rem,2vw+1.25rem,2.5rem)] font-bold type-heading mb-8 text-white">Get In Touch</h2>
           <p className="text-xl text-deep-200 mb-8">
-            I'd love to hear from you!
+            Open to new opportunities and collaborations — LinkedIn is the fastest way to reach me.
           </p>
           <a
             href="https://www.linkedin.com/in/wilson-narea-b94941191/"
