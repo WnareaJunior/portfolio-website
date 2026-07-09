@@ -31,12 +31,12 @@ const projects = [
 
 export default function ModernPortfolio({ onBackToOriginal }) {
   return (
-    <div className="bg-deep-950 text-white min-h-screen">
+    <div className="bg-deep-950 text-white min-h-screen tracking-[0.01em]">
       {/* Modern Header */}
       <header className="bg-deep-900/95 border-b border-deep-700 sticky top-0 z-50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between items-center">
-            <span className="text-2xl font-bold text-white">Wilson Narea</span>
+            <span className="text-2xl font-bold type-heading">Wilson Narea</span>
             <nav className="space-x-6">
               <a href="#about" className="text-deep-400 hover:text-white transition-colors duration-200">About</a>
               <a href="#projects" className="text-deep-400 hover:text-white transition-colors duration-200">Projects</a>
@@ -55,7 +55,7 @@ export default function ModernPortfolio({ onBackToOriginal }) {
       {/* Hero Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white" style={{ textWrap: 'balance' }}>
+          <h1 className="text-[clamp(2.75rem,6vw+1rem,4.5rem)] font-bold type-display mb-6 text-white">
             Building the Future
           </h1>
           <p className="text-xl text-deep-200 mb-8 leading-relaxed">
@@ -73,7 +73,7 @@ export default function ModernPortfolio({ onBackToOriginal }) {
       {/* About Section */}
       <section id="about" className="py-16 px-6 bg-deep-900 scroll-mt-24">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-center text-white">About Me</h2>
+          <h2 className="text-[clamp(1.875rem,2vw+1.25rem,2.5rem)] font-bold type-heading mb-8 text-center text-white">About Me</h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <img
               src="/images/profile.jpg"
@@ -94,7 +94,7 @@ export default function ModernPortfolio({ onBackToOriginal }) {
       {/* Projects Section */}
       <section id="projects" className="py-16 px-6 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-white">Featured Projects</h2>
+          <h2 className="text-[clamp(1.875rem,2vw+1.25rem,2.5rem)] font-bold type-heading mb-12 text-center text-white">Featured Projects</h2>
           <div className="space-y-8">
             {projects.map((project, index) => (
               <div
@@ -111,7 +111,7 @@ export default function ModernPortfolio({ onBackToOriginal }) {
                     />
                   </div>
                   <div className="p-8 flex flex-col justify-center">
-                    <h3 className="text-2xl font-bold mb-4 text-white">{project.title}</h3>
+                    <h3 className="text-2xl font-semibold type-heading mb-4 text-white">{project.title}</h3>
                     <p className="text-deep-200 mb-6 leading-relaxed">{project.description}</p>
                     <a
                       href={project.githubUrl}
@@ -138,7 +138,7 @@ export default function ModernPortfolio({ onBackToOriginal }) {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-6 bg-deep-900 scroll-mt-24">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 text-white">Get In Touch</h2>
+          <h2 className="text-[clamp(1.875rem,2vw+1.25rem,2.5rem)] font-bold type-heading mb-8 text-white">Get In Touch</h2>
           <p className="text-xl text-deep-200 mb-8">
             I'd love to hear from you!
           </p>

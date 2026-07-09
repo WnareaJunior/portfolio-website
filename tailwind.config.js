@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Archivo Variable', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'sans-serif'],
+      },
       colors: {
         // Monochrome neutrals with a barely-there cool tint (chroma ≤0.01) — contrast-verified
         deep: {

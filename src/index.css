@@ -1,9 +1,33 @@
+@import '@fontsource-variable/archivo/standard.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
   scroll-behavior: smooth;
+  font-kerning: normal;
+}
+
+@layer base {
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  /* Display type: expanded instrument-panel voice for the hero */
+  .type-display {
+    font-stretch: 125%;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  /* Headings: slightly expanded, ties sections to the display voice */
+  .type-heading {
+    font-stretch: 115%;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22,9 +46,8 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Archivo Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
