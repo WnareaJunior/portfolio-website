@@ -110,7 +110,7 @@ export default function WelcomeSection({ onNavigateToModern }) {
         </div>
 
         {/* Right sidebar with GIFs */}
-        <div className="flex flex-col space-y-4 ml-8 mt-16">
+        <div className="hidden sm:flex flex-col space-y-4 ml-8 mt-16">
           <img src="/images/fire.gif" alt="Fire" className="w-24 h-auto" />
           <img src="/images/dolphins.gif" alt="Dolphins" className="w-24 h-auto" />
         </div>

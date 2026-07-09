@@ -1,24 +1,18 @@
 export default function TransitionAnimation({ phase }) {
   return (
-    <div style={{ 
-      position: 'fixed', 
-      top: 0, 
-      left: 0, 
-      width: '100vw', 
-      height: '100vh', 
+    <div style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100vw',
+      height: '100vh',
       background: '#000',
       zIndex: 10000,
       overflow: 'hidden'
     }}>
-      
-      {phase === 2 && (
-        <div style={{
-          width: '100%',
-          height: '100%',
-          background: '#000',
-          position: 'relative',
-          overflow: 'hidden'
-        }}>
+
+      {phase === 'rain' && (
+        <>
           {Array.from({length: 20}).map((_, i) => (
             <div
               key={i}
@@ -53,25 +47,23 @@ export default function TransitionAnimation({ phase }) {
             DOWNLOADING :P...<br/>
             ████████████ 100%
           </div>
-        </div>
+        </>
       )}
-      
-      
-      
-      {phase === 4 && (
+
+      {phase === 'burst' && (
         <div style={{
           width: '100%',
           height: '100%',
-          background: 'radial-gradient(circle, #3b82f6 0%, transparent 70%)',
+          background: 'radial-gradient(circle, #ffffff 0%, transparent 70%)',
           animation: 'explode 0.4s ease-out forwards'
         }}>
           <style>{`
             @keyframes explode {
-              0% { 
+              0% {
                 transform: scale(0);
                 opacity: 1;
               }
-              100% { 
+              100% {
                 transform: scale(10);
                 opacity: 0;
               }
