@@ -50,6 +50,25 @@ export default function TransitionAnimation({ phase }) {
         </>
       )}
 
+      {phase === 'crt' && (
+        <div style={{
+          width: '100%',
+          height: '100%',
+          background: '#ffffff',
+          boxShadow: '0 0 120px 30px rgba(255, 255, 255, 0.5)',
+          animation: 'crtOff 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards'
+        }}>
+          <style>{`
+            @keyframes crtOff {
+              0%   { transform: scale(1, 1); opacity: 1; }
+              55%  { transform: scale(1, 0.006); opacity: 1; }
+              85%  { transform: scale(0.08, 0.004); opacity: 1; }
+              100% { transform: scale(0, 0.002); opacity: 0; }
+            }
+          `}</style>
+        </div>
+      )}
+
       {phase === 'burst' && (
         <div style={{
           width: '100%',

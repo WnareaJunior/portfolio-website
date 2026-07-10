@@ -26,20 +26,34 @@ export default function WelcomeSection({ onNavigateToModern }) {
             A trophy case of paradigm shifting projects
           </h1>
           
+          <p className="text-base text-black mb-6">
+            <span className="bg-red-600 text-white px-2 py-1 text-xs font-bold border border-red-800 mr-3 align-middle">
+              HOT!
+            </span>
+            <button
+              onClick={onNavigateToModern}
+              data-cta="trick-link"
+              className="text-blue-600 underline hover:text-red-600 bg-transparent border-none p-0 cursor-pointer text-base"
+              style={{ textDecoration: 'underline', fontFamily: 'Times New Roman, serif' }}
+            >
+              Developers hate this one simple trick, CLICK HERE NOW!
+            </button>
+          </p>
+
           {/* Visitor counter style box */}
           <div className="bg-yellow-200 border-2 border-yellow-600 p-3 mb-6 inline-block">
             <p className="text-sm font-bold text-black">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                    alt="new" className="inline w-8 h-4 bg-red-600 mr-2" />
               You are visitor #12,847
             </p>
           </div>
 
-          <p className="text-base text-black mb-4" style={{ lineHeight: '1.8' }}>
+          <p className="text-base text-black mb-8" style={{ lineHeight: '1.8' }}>
             Check out my{' '}
-            <a 
-              href="https://github.com/wnareajunior" 
-              target="_blank" 
+            <a
+              href="https://github.com/wnareajunior"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 underline hover:text-red-600"
               style={{ textDecoration: 'underline' }}
@@ -49,22 +63,9 @@ export default function WelcomeSection({ onNavigateToModern }) {
             {' '}for projects.
           </p>
 
-          <p className="text-base text-black mb-8">
-            <button 
-              onClick={onNavigateToModern}
-              className="text-blue-600 underline hover:text-red-600 bg-transparent border-none p-0 cursor-pointer"
-              style={{ textDecoration: 'underline', fontFamily: 'Times New Roman, serif' }}
-            >
-              Developers hate this one simple trick, CLICK HERE NOW!
-            </button>
-          </p>
-
           {/* Early web elements */}
           <div className="border-t-2 border-dashed border-gray-500 pt-6 mt-8">
             <div className="flex items-center space-x-4 mb-4">
-              <div className="bg-red-600 text-white px-2 py-1 text-xs font-bold border border-red-800">
-                HOT!
-              </div>
               <span className="text-sm text-black">Last updated: January 22, 2025</span>
             </div>
             

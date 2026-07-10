@@ -83,16 +83,57 @@ export default function DoNotTouchBox({ resetMs = 900, pad = 12 }) {
   const [pos, setPos] = useState({ left: 0, top: 0 });
   const [text, setText] = useState("Do not touch");
 
-  // Center on mount
+  // A candidate center (page coords) is safe if the box wouldn't cover the
+  // trick-link CTA — the one element the visitor must be able to find.
+  const isSafeSpot = (left, top, bw, bh) => {
+    const cta = document.querySelector('[data-cta="trick-link"]');
+    if (!cta) return true;
+    const r = cta.getBoundingClientRect();
+    const margin = 24;
+    const ctaL = r.left + window.scrollX - margin;
+    const ctaR = r.right + window.scrollX + margin;
+    const ctaT = r.top + window.scrollY - margin;
+    const ctaB = r.bottom + window.scrollY + margin;
+    return (
+      left + bw / 2 < ctaL || left - bw / 2 > ctaR ||
+      top + bh / 2 < ctaT || top - bh / 2 > ctaB
+    );
+  };
+
+  // Center on mount, nudged below center if that would cover the CTA
   useLayoutEffect(() => {
     const { innerWidth: w, innerHeight: h } = window;
-    setPos({ left: w / 2, top: h / 2 });
+    const el = ref.current;
+    const bw = el ? el.offsetWidth : 160;
+    const bh = el ? el.offsetHeight : 48;
+    let left = w / 2;
+    let top = h / 2;
+    if (!isSafeSpot(left, top, bw, bh)) top = (h * 3) / 4;
+    setPos({ left, top });
   }, []);
 
   // Cleanup timer on unmount
   useEffect(() => {
     return () => resetTimerRef.current && clearTimeout(resetTimerRef.current);
   }, []);
+
+  // Keep the box on-screen when the viewport resizes or rotates
+  useEffect(() => {
+    const onResize = () => {
+      const el = ref.current;
+      if (!el) return;
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const bw = el.offsetWidth;
+      const bh = el.offsetHeight;
+      setPos((p) => ({
+        left: Math.min(Math.max(p.left, pad + bw / 2), w - pad - bw / 2),
+        top: Math.min(Math.max(p.top, pad + bh / 2), h - pad - bh / 2),
+      }));
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, [pad]);
 
   // After the phrase updates, measure the box and place it safely
   useLayoutEffect(() => {
@@ -117,8 +158,14 @@ export default function DoNotTouchBox({ resetMs = 900, pad = 12 }) {
     const minY = pad + bh / 2;
     const maxY = h - pad - bh / 2;
 
-    const left = minX >= maxX ? w / 2 : Math.random() * (maxX - minX) + minX;
-    const top  = minY >= maxY ? h / 2 : Math.random() * (maxY - minY) + minY;
+    // Sample random spots, rejecting any that would cover the trick-link CTA
+    let left = w / 2;
+    let top = h / 2;
+    for (let attempt = 0; attempt < 12; attempt++) {
+      left = minX >= maxX ? w / 2 : Math.random() * (maxX - minX) + minX;
+      top  = minY >= maxY ? h / 2 : Math.random() * (maxY - minY) + minY;
+      if (isSafeSpot(left, top, bw, bh)) break;
+    }
 
     setPos({ left, top });
     teleportPendingRef.current = false; // done for this hover

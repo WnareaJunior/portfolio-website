@@ -13,7 +13,7 @@ const projects = [
     description: "Drop-in AI chatbot for business websites. An embeddable widget with customizable behavior on a backend built to scale — add the script, configure the bot, done.",
     githubUrl: "https://github.com/WnareaJunior/chatbot-saas-web-",
     image: "/images/projects/chatbot.jpg",
-    imageAlt: "ChatBot Pro landing page with an embedded chat widget"
+    imageAlt: "Chatbot Pro landing page: your business, running 24/7 — without hiring more staff"
   },
   {
     id: 3,
@@ -45,9 +45,9 @@ export default function ModernPortfolio({ onBackToOriginal }) {
               <a href="#about" className="text-deep-400 hover:text-white transition-colors duration-200">About</a>
               <a href="#projects" className="text-deep-400 hover:text-white transition-colors duration-200">Projects</a>
               <a href="#contact" className="text-deep-400 hover:text-white transition-colors duration-200">Contact</a>
-              <button 
+              <button
                 onClick={onBackToOriginal}
-                className="text-deep-400 hover:text-white transition-colors duration-200"
+                className="text-deep-400 hover:text-white border border-deep-700 hover:border-deep-400 rounded px-3 py-1 transition-colors duration-200"
               >
                 ← Back to 1998
               </button>
