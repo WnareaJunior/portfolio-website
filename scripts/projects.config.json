@@ -3,12 +3,18 @@
   "pinned": [
     "scene"
   ],
+  "maxAgeMonths": 24,
   "exclude": [
     "portfolio-website",
     "wil",
     "intro-to-programming",
     "30-days-csharp-fundamentals-review",
-    "30-days-react-fundamentals-review-"
+    "30-days-react-fundamentals-review-",
+    "code-noodling",
+    "WebBot",
+    "Java-projects",
+    "OpenCrib.Backend",
+    "OpenCrib.Firebase.Backend"
   ],
   "overrides": {
     "scene": {

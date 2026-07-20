@@ -68,8 +68,17 @@ function titleFromName(name) {
 
 const repos = await gh(`/users/${config.username}/repos?per_page=100`);
 
+// Repos untouched for longer than maxAgeMonths fall off the site on the next
+// weekly refresh. Pinned repos are exempt.
+const cutoff = new Date();
+cutoff.setMonth(cutoff.getMonth() - (config.maxAgeMonths ?? 1200));
+
 const candidates = repos.filter(
-  (r) => !r.fork && !r.archived && !config.exclude.includes(r.name)
+  (r) =>
+    !r.fork &&
+    !r.archived &&
+    !config.exclude.includes(r.name) &&
+    ((config.pinned ?? []).includes(r.name) || new Date(r.pushed_at) >= cutoff)
 );
 
 const projects = [];
