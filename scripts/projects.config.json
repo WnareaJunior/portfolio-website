@@ -41,8 +41,8 @@
   "manual": [
     {
       "name": "chatbot-saas-web-",
-      "title": "Chatbot SaaS Web Integration",
-      "description": "Drop-in AI chatbot for business websites. An embeddable widget with customizable behavior on a backend built to scale — add the script, configure the bot, done.",
+      "title": "Jetstone AI — Chatbot SaaS 🤖",
+      "description": "The chatbot platform behind my business, Jetstone AI. A drop-in AI chatbot for business websites: an embeddable widget with customizable behavior on a backend built to scale — add the script, configure the bot, done.",
       "githubUrl": "https://github.com/WnareaJunior/chatbot-saas-web-",
       "image": "/images/projects/chatbot.jpg",
       "imageAlt": "Chatbot Pro landing page: your business, running 24/7 — without hiring more staff",
