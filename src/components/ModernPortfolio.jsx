@@ -1,37 +1,6 @@
-const projects = [
-  {
-    id: 1,
-    title: "Panthalassa Buoy AI 🌊⚡",
-    description: "Ocean wave forecasting for renewable energy. Machine learning models trained on Copernicus Marine and NOAA datasets predict wave activity and flag the best deployment sites for the 200-ft Panthalassa energy-harvesting buoy.",
-    githubUrl: "https://github.com/WnareaJunior/wave-energy-forecasting-ai",
-    image: "/images/projects/panthalassa.jpg",
-    imageAlt: "Panthalassa dashboard showing data pipeline status and wave power analysis results"
-  },
-  {
-    id: 2,
-    title: "Chatbot SaaS Web Integration",
-    description: "Drop-in AI chatbot for business websites. An embeddable widget with customizable behavior on a backend built to scale — add the script, configure the bot, done.",
-    githubUrl: "https://github.com/WnareaJunior/chatbot-saas-web-",
-    image: "/images/projects/chatbot.jpg",
-    imageAlt: "Chatbot Pro landing page: your business, running 24/7 — without hiring more staff"
-  },
-  {
-    id: 3,
-    title: "Mission Control Frontend 🚀",
-    description: "Mission-control software for self-landing amateur rockets, built as a senior capstone with SEDS FIU. Live telemetry monitoring, stop/abort commands, and flight data recording.",
-    githubUrl: "https://github.com/WnareaJunior/SEDS-FIU",
-    image: "/images/projects/mission-control.jpg",
-    imageAlt: "Mission control interface graphing live tank pressures and weights during a test"
-  },
-  {
-    id: 4,
-    title: "OpenCrib 🏠✨",
-    description: "iOS app for hosting events and bringing people together — house shows, backyard parties, art pop-ups, workshops. Open your door to a community that cares.",
-    githubUrl: "https://github.com/WnareaJunior/Open-Crib.Frontend",
-    image: "/images/projects/opencrib.jpg",
-    imageAlt: "Three OpenCrib iPhone screens: event map, host profile, and party creation form"
-  }
-];
+// Generated from GitHub by scripts/fetch-projects.mjs — refreshed weekly by the
+// update-projects workflow. Starred repos first, then most recently pushed.
+import projects from "../data/projects.json";
 
 export default function ModernPortfolio({ onBackToOriginal }) {
   return (
@@ -100,11 +69,11 @@ export default function ModernPortfolio({ onBackToOriginal }) {
       {/* Projects Section */}
       <section id="projects" className="py-16 px-6 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-[clamp(1.875rem,2vw+1.25rem,2.5rem)] font-bold type-heading mb-12 text-center text-white">Featured Projects</h2>
+          <h2 className="text-[clamp(1.875rem,2vw+1.25rem,2.5rem)] font-bold type-heading mb-12 text-center text-white">Projects</h2>
           <div className="space-y-8">
             {projects.map((project, index) => (
               <div
-                key={project.id}
+                key={project.name}
                 className="bg-deep-900 rounded-xl overflow-hidden"
               >
                 <div className={`grid md:grid-cols-2 gap-0 ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
@@ -117,8 +86,24 @@ export default function ModernPortfolio({ onBackToOriginal }) {
                     />
                   </div>
                   <div className="p-8 flex flex-col justify-center">
-                    <h3 className="text-2xl font-semibold type-heading mb-4 text-white">{project.title}</h3>
-                    <p className="text-deep-200 mb-6 leading-relaxed">{project.description}</p>
+                    <div className="flex items-start justify-between gap-4 mb-4">
+                      <h3 className="text-2xl font-semibold type-heading text-white">{project.title}</h3>
+                      {project.stars > 0 && (
+                        <span
+                          className="inline-flex items-center gap-1 shrink-0 mt-1 text-sm text-deep-400 border border-deep-700 rounded-full px-2.5 py-0.5"
+                          title={`${project.stars} GitHub star${project.stars === 1 ? "" : "s"}`}
+                        >
+                          <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z" />
+                          </svg>
+                          {project.stars}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-deep-200 mb-4 leading-relaxed">{project.description}</p>
+                    {project.language && (
+                      <p className="text-sm text-deep-400 mb-6">{project.language}</p>
+                    )}
                     <a
                       href={project.githubUrl}
                       target="_blank"

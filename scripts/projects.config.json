@@ -1,0 +1,46 @@
+{
+  "username": "WnareaJunior",
+  "pinned": [
+    "scene"
+  ],
+  "exclude": [
+    "portfolio-website",
+    "wil",
+    "intro-to-programming",
+    "30-days-csharp-fundamentals-review",
+    "30-days-react-fundamentals-review-"
+  ],
+  "overrides": {
+    "scene": {
+      "title": "Scene 🗺️🎶",
+      "image": "/images/projects/scene.jpg",
+      "imageAlt": "Three Scene iPhone screens: sign-in, live event map of Bushwick, and an RSVP event list"
+    },
+    "wave-energy-forecasting-ai": {
+      "title": "Panthalassa Buoy AI 🌊⚡",
+      "image": "/images/projects/panthalassa.jpg",
+      "imageAlt": "Panthalassa dashboard showing data pipeline status and wave power analysis results"
+    },
+    "SEDS-FIU": {
+      "title": "Mission Control Frontend 🚀",
+      "image": "/images/projects/mission-control.jpg",
+      "imageAlt": "Mission control interface graphing live tank pressures and weights during a test"
+    },
+    "Open-Crib.Frontend": {
+      "title": "OpenCrib 🏠✨",
+      "image": "/images/projects/opencrib.jpg",
+      "imageAlt": "Three OpenCrib iPhone screens: event map, host profile, and party creation form"
+    }
+  },
+  "manual": [
+    {
+      "name": "chatbot-saas-web-",
+      "title": "Chatbot SaaS Web Integration",
+      "description": "Drop-in AI chatbot for business websites. An embeddable widget with customizable behavior on a backend built to scale — add the script, configure the bot, done.",
+      "githubUrl": "https://github.com/WnareaJunior/chatbot-saas-web-",
+      "image": "/images/projects/chatbot.jpg",
+      "imageAlt": "Chatbot Pro landing page: your business, running 24/7 — without hiring more staff",
+      "stars": 0
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+[
+  {
+    "name": "scene",
+    "title": "Scene 🗺️🎶",
+    "description": "Location-based event discovery platform connecting micro-venue hosts and independent artists with local audiences. Map-driven, RSVP-enforced, social-graph-aware.",
+    "githubUrl": "https://github.com/WnareaJunior/scene",
+    "stars": 1,
+    "language": "JavaScript",
+    "pushedAt": "2026-07-20T23:15:57Z",
+    "image": "/images/projects/scene.jpg",
+    "imageAlt": "Three Scene iPhone screens: sign-in, live event map of Bushwick, and an RSVP event list"
+  },
+  {
+    "name": "legal-intake-orchestrator",
+    "title": "Legal Intake Orchestrator",
+    "description": "Problem: Large firms like Morgan & Morgan process 10,000+ monthly client inquiries. Each one typically requires 15 minutes of paralegal time for classification, validation, and draft generation.",
+    "githubUrl": "https://github.com/WnareaJunior/legal-intake-orchestrator",
+    "stars": 2,
+    "language": "Python",
+    "pushedAt": "2025-11-06T01:48:19Z",
+    "image": "https://opengraph.githubassets.com/1/WnareaJunior/legal-intake-orchestrator",
+    "imageAlt": "GitHub preview card for legal-intake-orchestrator"
+  },
+  {
+    "name": "wave-energy-forecasting-ai",
+    "title": "Panthalassa Buoy AI 🌊⚡",
+    "description": "AI-powered ocean wave forecasting for renewable energy Panthalassa Buoy AI uses advanced machine learning trained on Copernicus Marine and NOAA datasets to predict wave activity and identify optimal deployment sites for the 200-ft Panthalassa energy-harvesting buoy.",
+    "githubUrl": "https://github.com/WnareaJunior/wave-energy-forecasting-ai",
+    "stars": 1,
+    "language": "Jupyter Notebook",
+    "pushedAt": "2026-07-18T22:15:00Z",
+    "image": "/images/projects/panthalassa.jpg",
+    "imageAlt": "Panthalassa dashboard showing data pipeline status and wave power analysis results"
+  },
+  {
+    "name": "OpenCrib.Firebase.Backend",
+    "title": "OpenCrib.Firebase.Backend",
+    "description": "Open Crib Backend using Firebase This FireBase backend is still under construction!",
+    "githubUrl": "https://github.com/WnareaJunior/OpenCrib.Firebase.Backend",
+    "stars": 1,
+    "language": "C#",
+    "pushedAt": "2025-08-30T01:48:03Z",
+    "image": "https://opengraph.githubassets.com/1/WnareaJunior/OpenCrib.Firebase.Backend",
+    "imageAlt": "GitHub preview card for OpenCrib.Firebase.Backend"
+  },
+  {
+    "name": "Open-Crib.Frontend",
+    "title": "OpenCrib 🏠✨",
+    "description": "OpenCrib is an iOS-first platform for anyone who wants to host events, share their space, or bring people together. From house shows and backyard parties to art pop-ups, workshops, or casual meetups, OpenCrib makes it easy to open your door to a community that cares.",
+    "githubUrl": "https://github.com/WnareaJunior/Open-Crib.Frontend",
+    "stars": 1,
+    "language": "Swift",
+    "pushedAt": "2025-08-30T01:37:09Z",
+    "image": "/images/projects/opencrib.jpg",
+    "imageAlt": "Three OpenCrib iPhone screens: event map, host profile, and party creation form"
+  },
+  {
+    "name": "Java-projects",
+    "title": "Java Projects",
+    "description": "Recollection of my early Java projects Never thought I would post these so the finished projects are all I saved to my drive ;(. Either way feel free to look around at my early Java projects :)",
+    "githubUrl": "https://github.com/WnareaJunior/Java-projects",
+    "stars": 1,
+    "language": null,
+    "pushedAt": "2022-04-28T04:09:34Z",
+    "image": "https://opengraph.githubassets.com/1/WnareaJunior/Java-projects",
+    "imageAlt": "GitHub preview card for Java-projects"
+  },
+  {
+    "name": "OpenCrib.Backend",
+    "title": "OpenCrib.Backend",
+    "description": "OpenCrib is a platform that lets anyone host anything and find their people—from house shows and art pop-ups to workshops and meetups. This repository contains the C# .NET MVC REST API backend that talks to MongoDB.",
+    "githubUrl": "https://github.com/WnareaJunior/OpenCrib.Backend",
+    "stars": 0,
+    "language": "C#",
+    "pushedAt": "2025-08-30T01:52:46Z",
+    "image": "https://opengraph.githubassets.com/1/WnareaJunior/OpenCrib.Backend",
+    "imageAlt": "GitHub preview card for OpenCrib.Backend"
+  },
+  {
+    "name": "SEDS-FIU",
+    "title": "Mission Control Frontend 🚀",
+    "description": "This repository contains the frontend software for a Mission Control system developed as part of a senior Capstone project. The full project involved designing and implementing a custom microcontroller board for amateur rocketry, with the goal of enabling gas-propellant, self-landing rockets.",
+    "githubUrl": "https://github.com/WnareaJunior/SEDS-FIU",
+    "stars": 0,
+    "language": "Python",
+    "pushedAt": "2025-08-30T01:44:48Z",
+    "image": "/images/projects/mission-control.jpg",
+    "imageAlt": "Mission control interface graphing live tank pressures and weights during a test"
+  },
+  {
+    "name": "code-noodling",
+    "title": "Code Noodling",
+    "description": "Library of different projects finished and unfinished not big enough to warrant their own repo.",
+    "githubUrl": "https://github.com/WnareaJunior/code-noodling",
+    "stars": 0,
+    "language": "Python",
+    "pushedAt": "2025-07-14T22:39:53Z",
+    "image": "https://opengraph.githubassets.com/1/WnareaJunior/code-noodling",
+    "imageAlt": "GitHub preview card for code-noodling"
+  },
+  {
+    "name": "WebBot",
+    "title": "WebBot",
+    "description": "Project using Puppeteer to access online vendors",
+    "githubUrl": "https://github.com/WnareaJunior/WebBot",
+    "stars": 0,
+    "language": "JavaScript",
+    "pushedAt": "2022-07-07T20:00:32Z",
+    "image": "https://opengraph.githubassets.com/1/WnareaJunior/WebBot",
+    "imageAlt": "GitHub preview card for WebBot"
+  },
+  {
+    "name": "chatbot-saas-web-",
+    "title": "Chatbot SaaS Web Integration",
+    "description": "Drop-in AI chatbot for business websites. An embeddable widget with customizable behavior on a backend built to scale — add the script, configure the bot, done.",
+    "githubUrl": "https://github.com/WnareaJunior/chatbot-saas-web-",
+    "image": "/images/projects/chatbot.jpg",
+    "imageAlt": "Chatbot Pro landing page: your business, running 24/7 — without hiring more staff",
+    "stars": 0
+  }
+]
