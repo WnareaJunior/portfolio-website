@@ -1,10 +1,10 @@
 <!-- qotd:start -->
-
 # Quote of the Day
 
-> The mailbox was bent and broken and looked like someone had knocked it over on purpose.
+> Time is more valuable than money.
 
 <!-- qotd:end -->
+
 
 # My Portfolio Website
 
