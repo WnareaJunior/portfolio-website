@@ -1,10 +1,10 @@
 <!-- qotd:start -->
-
 # Quote of the Day
 
-> The mailbox was bent and broken and looked like someone had knocked it over on purpose.
+> A billionaire doesn't know what it means to be broke.
 
 <!-- qotd:end -->
+
 
 # My Portfolio Website
 
